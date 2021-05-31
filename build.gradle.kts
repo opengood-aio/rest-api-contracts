@@ -2,7 +2,7 @@ import io.opengood.gradle.enumeration.ProjectType
 import org.springframework.cloud.contract.verifier.config.TestMode
 
 plugins {
-    id("io.opengood.gradle.config") version "1.22.0"
+    id("io.opengood.gradle.config") version "1.22.1"
     id("org.springframework.cloud.contract") version "3.0.3"
 }
 
