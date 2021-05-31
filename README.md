@@ -30,3 +30,152 @@ implementation("io.opengood.api:rest-api-contracts:VERSION")
 ```
 
 **Note:** See *Release* version badge above for latest version.
+
+## Features
+
+### `GetDataRequest`
+
+Data contract for retrieving data. Includes filtering, paging, and
+sorting.
+
+Data in JSON format:
+
+* `name`: Name of the data entity in data repository
+* `filters`: Map of key/value pairs representing fields on data entity
+  in which to filter data from data repository
+  * `key`: Name of field on data entity in which to filter data
+  * `value`: Filter value for field on data entity
+* `page`: Pagination parameters in which to retrieve a page of data
+  * `index`: Current index of page of data to retrieve
+  * `size`: Number of rows of data per page to retrieve
+* `sort`: Map of key/value pairs representing fields on data entity and
+  direction in which to sort data from data repository
+  * `params`: Sorting parameters in which to sort data
+    * `key`: Name of field on data entity in which to sort data
+    * `value`: Sort direction `ASC` or `DESC` of field on data entity
+
+#### Example
+
+```json
+{
+    "name": "products",
+    "filters": {
+        "name": "Product"
+    },
+    "page": {
+        "index": 0,
+        "size": 2
+    },
+    "sort": {
+        "params": {
+            "name": "ASC"
+        }
+    }
+}
+```
+
+### `DataResponse`
+
+Data contract containing data response. Includes page and record data.
+
+Data in JSON format:
+
+* `state`: State of request `SUCCESS` or `FAILED`
+* `message`: Textual message providing context for response
+* `pages`: Object containing information about page data
+  * `state`: State of page `NONE` or `PAGINATED`
+  * `index`: Current index of page of data retrieved
+  * `size`: Number of rows of data in current page retrieved
+  * `count`: Total number of pages in dataset
+* `records`: Object containing information about record data
+  * `total`: Total number of records in dataset
+* `data`: Array containing map of key/value pairs representing row(s) of
+  data retrieved from data repository
+
+#### Example
+
+```json
+{
+    "state": "SUCCESS",
+    "message": "Data retrieved",
+    "pages": {
+        "state": "PAGINATED",
+        "index": 0,
+        "size": 2,
+        "count": 1
+    },
+    "records": {
+        "total": 2
+    },
+    "data": [
+        {
+            "product_id": 1,
+            "name": "Product 1"
+        },
+        {
+            "product_id": 2,
+            "name": "Product 2"
+        }
+    ]
+}
+```
+
+### `SaveDataRequest`
+
+Data contract for saving data.
+
+Data in JSON format:
+
+* `name`: Name of the data entity in data repository
+* `data`: Array containing map of key/value pairs representing row(s) of
+  data to save to data repository
+
+#### Example
+
+```
+POST /data/save HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "products",
+    "data": [
+        {
+            "name": "Product 1"
+        },
+        {
+            "name": "Product 2"
+        }
+    ]
+}
+```
+
+### `ActionResponse`
+
+Data contract containing action response (result of some operation
+performed).
+
+Data in JSON format:
+
+* `state`: State of request `SUCCESS` or `FAILED`
+* `message`: Textual message providing context for response
+* `data`: Array containing map of key/value pairs with generated unique
+  identifier(s) representing row(s) of data saved to data repository
+
+#### Example
+
+```json
+{
+    "state": "SUCCESS",
+    "message": "Data saved",
+    "data": [
+        {
+            "product_id": 1,
+            "name": "Product 1"
+        },
+        {
+            "product_id": 2,
+            "name": "Product 2"
+        }
+    ]
+}
+```

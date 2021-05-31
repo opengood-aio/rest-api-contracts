@@ -7,7 +7,7 @@ import io.opengood.api.rest.contracts.response.DataResponse
 import io.opengood.api.rest.contracts.response.OperationState
 import org.springframework.http.ResponseEntity
 
-internal fun actionFailedResponse(
+fun actionFailedResponse(
     message: String
 ) =
     ResponseEntity.badRequest().body(
@@ -18,7 +18,7 @@ internal fun actionFailedResponse(
         )
     )
 
-internal fun actionSuccessResponse(
+fun actionSuccessResponse(
     message: String = "",
     data: List<Map<String, Any>> = emptyList()
 ) =
@@ -30,7 +30,7 @@ internal fun actionSuccessResponse(
         )
     )
 
-internal fun dataFailedResponse(
+fun dataFailedResponse(
     message: String
 ) =
     ResponseEntity.badRequest().body(
@@ -43,7 +43,7 @@ internal fun dataFailedResponse(
         )
     )
 
-internal fun dataSuccessResponse(
+fun dataSuccessResponse(
     message: String = "",
     pages: PageData = PageData.EMPTY,
     records: RecordData = RecordData.EMPTY,

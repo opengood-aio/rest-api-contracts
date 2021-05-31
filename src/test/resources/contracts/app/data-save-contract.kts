@@ -22,7 +22,6 @@ contract {
         }
     }
     response {
-        delay = fixedMilliseconds(1000)
         status = OK
         headers {
             contentType = "application/json"
