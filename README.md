@@ -132,10 +132,7 @@ Data in JSON format:
 
 #### Example
 
-```
-POST /data/save HTTP/1.1
-Content-Type: application/json
-
+```json
 {
     "name": "products",
     "data": [
