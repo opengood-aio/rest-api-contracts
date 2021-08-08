@@ -13,21 +13,23 @@ contract {
         }
         body = body(
             mapOf(
-                "name" to "test",
-                "filters" to mapOf("foo" to "bar"),
+                "name" to "products",
+                "filters" to mapOf(
+                    "name" to "Product 1"
+                ),
                 "page" to mapOf(
                     "index" to 0,
                     "size" to 1
                 ),
                 "sort" to mapOf(
                     "params" to mapOf(
-                        "foo" to "ASC"
+                        "product_name" to "ASC"
                     )
                 )
             )
         )
         bodyMatchers {
-            jsonPath("$.name", byRegex("test"))
+            jsonPath("$.name", byRegex("products"))
         }
     }
     response {
@@ -50,12 +52,12 @@ contract {
                 ),
                 "data" to listOf(
                     mapOf(
-                        "id" to 1,
-                        "foo" to "bar"
+                        "product_id" to 1,
+                        "name" to "Product 1"
                     ),
                     mapOf(
-                        "id" to 2,
-                        "foo" to "baz"
+                        "product_id" to 2,
+                        "name" to "Product 2"
                     )
                 )
             )

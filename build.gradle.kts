@@ -2,8 +2,8 @@ import io.opengood.gradle.enumeration.ProjectType
 import org.springframework.cloud.contract.verifier.config.TestMode
 
 plugins {
-    id("io.opengood.gradle.config") version "1.22.1"
-    id("org.springframework.cloud.contract") version "3.0.3"
+    id("io.opengood.gradle.config")
+    id("org.springframework.cloud.contract")
 }
 
 group = "io.opengood.api"
@@ -13,7 +13,7 @@ opengood {
         projectType = ProjectType.LIB
     }
     test {
-        testFrameworks {
+        frameworks {
             java = true
         }
     }
@@ -22,15 +22,11 @@ opengood {
     }
 }
 
-object Versions {
-    const val SPRING_CLOUD_CONTRACT = "3.0.3"
-}
-
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-web:_")
 
-    testImplementation("org.springframework.cloud:spring-cloud-contract-spec-kotlin:${Versions.SPRING_CLOUD_CONTRACT}")
-    testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier:${Versions.SPRING_CLOUD_CONTRACT}")
+    testImplementation("org.springframework.cloud:spring-cloud-contract-spec-kotlin:_")
+    testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier:_")
 }
 
 contracts {

@@ -3,6 +3,7 @@ package io.opengood.api.rest.contracts
 import io.opengood.api.rest.contracts.page.PageData
 import io.opengood.api.rest.contracts.record.RecordData
 import io.opengood.api.rest.contracts.response.ActionResponse
+import io.opengood.api.rest.contracts.response.DataByIdResponse
 import io.opengood.api.rest.contracts.response.DataResponse
 import io.opengood.api.rest.contracts.response.OperationState
 import org.springframework.http.ResponseEntity
@@ -24,6 +25,29 @@ fun actionSuccessResponse(
 ) =
     ResponseEntity.ok(
         ActionResponse(
+            state = OperationState.SUCCESS,
+            message = message,
+            data = data
+        )
+    )
+
+fun dataByIdFailedResponse(
+    message: String
+) =
+    ResponseEntity.badRequest().body(
+        DataByIdResponse(
+            state = OperationState.FAILED,
+            message = message,
+            data = emptyMap()
+        )
+    )
+
+fun dataByIdSuccessResponse(
+    message: String = "",
+    data: Map<String, Any>
+) =
+    ResponseEntity.ok(
+        DataByIdResponse(
             state = OperationState.SUCCESS,
             message = message,
             data = data
