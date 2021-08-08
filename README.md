@@ -71,7 +71,7 @@ Data in JSON format:
 ```json
 {
     "state": "SUCCESS",
-    "message": "Data saved"
+    "message": "Data deleted"
 }
 ```
 
