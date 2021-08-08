@@ -159,8 +159,7 @@ Data in JSON format:
 {
     "name": "products",
     "filters": {
-        "key": "product_name",
-        "value": "Product"
+        "product_name": "Product"
     },
     "page": {
         "index": 0,
@@ -168,8 +167,7 @@ Data in JSON format:
     },
     "sort": {
         "params": {
-            "key": "product_name",
-            "value": "ASC"
+            "product_name": "ASC"
         }
     }
 }
