@@ -133,42 +133,61 @@ sorting.
 
 Other contracts used:
 
+* `FilterRequest`
+* `FilterParameter`
+* `FilterType`
 * `PageRequest`
 * `SortRequest`
+* `SortParameter`
 * `SortDirection`
 
 Data in JSON format:
 
 * `name`: Name of the data object type in data repository
-* `filters`: Map of key/value pairs representing fields in which to
-  filter data from data repository
-  * `key`: Name of field in which to filter data
-  * `value`: Filter value for field
-* `paging`: Pagination parameters in which to retrieve a page of data
+* `filter`: List of parameters representing fields, values, and types
+  in which to filter data from data repository
+  * `params`: Filtering parameters in which to filter data
+    * `name`: Name of field in which to filter data
+    * `value`: Filter value for field
+    * `type`: Filter type for field
+      * `EQUALS` performs equality filter on field
+      * `CONTAINS` performs contains filter on field
+* `page`: Pagination parameters in which to retrieve a page of data
   * `index`: Current index of page of data to retrieve
   * `size`: Number of rows of data per page to retrieve
-* `sorting`: Map of key/value pairs representing fields and direction in
+* `sort`: List of parameters representing fields and direction in
   which to sort data from data repository
   * `params`: Sorting parameters in which to sort data
-    * `key`: Name of field in which to sort data
-    * `value`: Sort direction `ASC` or `DESC` of field
+    * `name`: Name of field in which to sort data
+    * `direction`: Sort direction of field
+      * `ASC` sorts field in ascending order
+      * `DESC` sorts field in descending order
 
 ##### Example
 
 ```json
 {
     "name": "products",
-    "filters": {
-        "product_name": "Product"
+    "filter": {
+        "params": [
+            {
+                "name": "product_name",
+                "value": "Product",
+                "type": "CONTAINS"
+            }
+        ]
     },
     "page": {
         "index": 0,
         "size": 2
     },
     "sort": {
-        "params": {
-            "product_name": "ASC"
-        }
+        "params": [
+            {
+                "name": "product_name",
+                "direction": "ASC"
+            }
+        ]
     }
 }
 ```

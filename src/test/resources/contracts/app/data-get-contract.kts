@@ -14,16 +14,25 @@ contract {
         body = body(
             mapOf(
                 "name" to "products",
-                "filters" to mapOf(
-                    "name" to "Product 1"
+                "filter" to mapOf(
+                    "params" to listOf(
+                        mapOf(
+                            "name" to "product_name",
+                            "value" to "Product 1",
+                            "type" to "EQUALS"
+                        )
+                    )
                 ),
                 "page" to mapOf(
                     "index" to 0,
                     "size" to 1
                 ),
                 "sort" to mapOf(
-                    "params" to mapOf(
-                        "product_name" to "ASC"
+                    "params" to listOf(
+                        mapOf(
+                            "name" to "product_name",
+                            "direction" to "ASC"
+                        )
                     )
                 )
             )
