@@ -23,7 +23,7 @@ opengood {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web:_")
+    implementation("org.springframework.boot:spring-boot-starter-web")
 
     testImplementation("org.springframework.cloud:spring-cloud-contract-spec-kotlin:_")
     testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier:_")
