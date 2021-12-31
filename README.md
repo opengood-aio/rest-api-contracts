@@ -152,6 +152,9 @@ Data in JSON format:
     * `type`: Filter type for field
       * `EQUALS` performs equality filter on field
       * `CONTAINS` performs contains filter on field
+    * `condition`: Filter condition for field
+      * `AND` creates an and condition for field
+      * `OR` creates an or condition for field
 * `page`: Pagination parameters in which to retrieve a page of data
   * `index`: Current index of page of data to retrieve
   * `size`: Number of rows of data per page to retrieve
@@ -173,7 +176,8 @@ Data in JSON format:
             {
                 "name": "product_name",
                 "value": "Product",
-                "type": "CONTAINS"
+                "type": "CONTAINS",
+                "condition": "AND"
             }
         ]
     },
