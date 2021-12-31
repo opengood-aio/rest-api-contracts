@@ -19,7 +19,8 @@ contract {
                         mapOf(
                             "name" to "product_name",
                             "value" to "Product 1",
-                            "type" to "EQUALS"
+                            "type" to "EQUALS",
+                            "condition" to "AND"
                         )
                     )
                 ),

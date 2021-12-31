@@ -136,6 +136,7 @@ Other contracts used:
 * `FilterRequest`
 * `FilterParameter`
 * `FilterType`
+* `FilterCondition`
 * `PageRequest`
 * `SortRequest`
 * `SortParameter`
