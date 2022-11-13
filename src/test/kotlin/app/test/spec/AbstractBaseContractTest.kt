@@ -1,7 +1,7 @@
-package spec
+package app.test.spec
 
-import app.Controller
 import app.TestApplication
+import app.controller.Controller
 import io.restassured.module.mockmvc.RestAssuredMockMvc.standaloneSetup
 import org.junit.jupiter.api.BeforeEach
 import org.springframework.beans.factory.annotation.Autowired

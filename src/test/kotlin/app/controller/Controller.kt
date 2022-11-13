@@ -1,4 +1,4 @@
-package app
+package app.controller
 
 import io.opengood.api.rest.contracts.actionSuccessResponse
 import io.opengood.api.rest.contracts.dataByIdSuccessResponse
