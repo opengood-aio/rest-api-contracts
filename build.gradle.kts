@@ -31,5 +31,5 @@ dependencies {
 
 contracts {
     testMode.set(TestMode.MOCKMVC)
-    baseClassForTests.set("spec.AbstractBaseContractTest")
+    baseClassForTests.set("test.spec.AbstractBaseContractTest")
 }

@@ -1,4 +1,4 @@
-package app.test.spec
+package test.spec
 
 import app.TestApplication
 import app.controller.Controller
