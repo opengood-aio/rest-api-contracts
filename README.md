@@ -10,6 +10,11 @@
 
 Reusable REST API contracts
 
+## Compatibility
+
+* Java 17
+* Spring Boot 3
+
 ## Setup
 
 ### Add Dependency

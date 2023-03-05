@@ -10,5 +10,5 @@ data class GetDataRequest(
     val name: String,
     val filter: FilterRequest = FilterRequest.EMPTY,
     val page: PageRequest = PageRequest.EMPTY,
-    val sort: SortRequest = SortRequest.EMPTY
+    val sort: SortRequest = SortRequest.EMPTY,
 )

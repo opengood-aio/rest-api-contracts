@@ -26,7 +26,7 @@ class Controller {
     @PostMapping("/delete")
     fun delete(@RequestBody request: DeleteDataRequest): ResponseEntity<ActionResponse> {
         return actionSuccessResponse(
-            message = "Data deleted"
+            message = "Data deleted",
         )
     }
 
@@ -36,8 +36,8 @@ class Controller {
             message = "Data retrieved",
             data = mapOf(
                 "product_id" to 1,
-                "name" to "Product 1"
-            )
+                "name" to "Product 1",
+            ),
         )
     }
 
@@ -49,21 +49,21 @@ class Controller {
                 state = PageState.PAGINATED,
                 index = 0,
                 size = 2,
-                count = 1
+                count = 1,
             ),
             records = RecordData(
-                total = 2
+                total = 2,
             ),
             data = listOf(
                 mapOf(
                     "product_id" to 1,
-                    "name" to "Product 1"
+                    "name" to "Product 1",
                 ),
                 mapOf(
                     "product_id" to 2,
-                    "name" to "Product 2"
-                )
-            )
+                    "name" to "Product 2",
+                ),
+            ),
         )
     }
 
@@ -74,9 +74,9 @@ class Controller {
             data = listOf(
                 mapOf(
                     "product_id" to 1,
-                    "name" to "Product 1"
-                )
-            )
+                    "name" to "Product 1",
+                ),
+            ),
         )
     }
 }

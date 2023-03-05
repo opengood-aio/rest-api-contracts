@@ -20,23 +20,23 @@ contract {
                             "name" to "product_name",
                             "value" to "Product 1",
                             "type" to "EQUALS",
-                            "condition" to "AND"
-                        )
-                    )
+                            "condition" to "AND",
+                        ),
+                    ),
                 ),
                 "page" to mapOf(
                     "index" to 0,
-                    "size" to 1
+                    "size" to 1,
                 ),
                 "sort" to mapOf(
                     "params" to listOf(
                         mapOf(
                             "name" to "product_name",
-                            "direction" to "ASC"
-                        )
-                    )
-                )
-            )
+                            "direction" to "ASC",
+                        ),
+                    ),
+                ),
+            ),
         )
         bodyMatchers {
             jsonPath("$.name", byRegex("products"))
@@ -55,22 +55,22 @@ contract {
                     "state" to "PAGINATED",
                     "index" to 0,
                     "size" to 2,
-                    "count" to 1
+                    "count" to 1,
                 ),
                 "records" to mapOf(
-                    "total" to 2
+                    "total" to 2,
                 ),
                 "data" to listOf(
                     mapOf(
                         "product_id" to 1,
-                        "name" to "Product 1"
+                        "name" to "Product 1",
                     ),
                     mapOf(
                         "product_id" to 2,
-                        "name" to "Product 2"
-                    )
-                )
-            )
+                        "name" to "Product 2",
+                    ),
+                ),
+            ),
         )
         bodyMatchers {
             jsonPath("$.message", byRegex("Data retrieved"))

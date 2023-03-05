@@ -6,5 +6,5 @@ data class DeleteDataRequest(
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     val name: String,
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    val id: String
+    val id: String,
 )

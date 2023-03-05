@@ -8,5 +8,5 @@ data class DataResponse(
     val message: String,
     val pages: PageData,
     val records: RecordData,
-    val data: List<Map<String, Any>>
+    val data: List<Map<String, Any>>,
 )

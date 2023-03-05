@@ -4,5 +4,5 @@ data class FilterParameter(
     val name: String,
     val value: Any,
     val type: FilterType,
-    val condition: FilterCondition
+    val condition: FilterCondition,
 )

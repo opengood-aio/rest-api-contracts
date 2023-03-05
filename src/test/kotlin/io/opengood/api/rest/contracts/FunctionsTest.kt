@@ -20,7 +20,7 @@ class FunctionsTest : FunSpec({
             body shouldBe ActionResponse(
                 state = OperationState.FAILED,
                 message = "Error",
-                data = emptyList()
+                data = emptyList(),
             )
         }
     }
@@ -33,7 +33,7 @@ class FunctionsTest : FunSpec({
             body shouldBe ActionResponse(
                 state = OperationState.SUCCESS,
                 message = "",
-                data = emptyList()
+                data = emptyList(),
             )
         }
     }
@@ -46,7 +46,7 @@ class FunctionsTest : FunSpec({
             body shouldBe DataByIdResponse(
                 state = OperationState.FAILED,
                 message = "Error",
-                data = emptyMap()
+                data = emptyMap(),
             )
         }
     }
@@ -54,7 +54,7 @@ class FunctionsTest : FunSpec({
     test("dataByIdSuccessResponse function returns response entity with ok status, success state, no message, and map of data") {
         val data = mapOf(
             "product_id" to 1,
-            "name" to "Product 1"
+            "name" to "Product 1",
         )
 
         val response = dataByIdSuccessResponse(data = data)
@@ -64,7 +64,7 @@ class FunctionsTest : FunSpec({
             body shouldBe DataByIdResponse(
                 state = OperationState.SUCCESS,
                 message = "",
-                data = data
+                data = data,
             )
         }
     }
@@ -79,7 +79,7 @@ class FunctionsTest : FunSpec({
                 message = "Error",
                 pages = PageData.EMPTY,
                 records = RecordData.EMPTY,
-                data = emptyList()
+                data = emptyList(),
             )
         }
     }
@@ -88,8 +88,8 @@ class FunctionsTest : FunSpec({
         val data = listOf(
             mapOf(
                 "product_id" to 1,
-                "name" to "Product 1"
-            )
+                "name" to "Product 1",
+            ),
         )
 
         val response = dataSuccessResponse(data = data)
@@ -101,7 +101,7 @@ class FunctionsTest : FunSpec({
                 message = "",
                 pages = PageData.EMPTY,
                 records = RecordData.EMPTY,
-                data = data
+                data = data,
             )
         }
     }

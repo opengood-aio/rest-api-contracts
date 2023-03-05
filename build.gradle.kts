@@ -1,4 +1,3 @@
-import io.opengood.gradle.enumeration.ProjectType
 import org.springframework.cloud.contract.verifier.config.TestMode
 
 plugins {
@@ -9,9 +8,6 @@ plugins {
 group = "io.opengood.api"
 
 opengood {
-    main {
-        projectType = ProjectType.LIB
-    }
     test {
         frameworks {
             java = true

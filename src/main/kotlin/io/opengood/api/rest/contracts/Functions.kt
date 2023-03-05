@@ -9,53 +9,53 @@ import io.opengood.api.rest.contracts.response.OperationState
 import org.springframework.http.ResponseEntity
 
 fun actionFailedResponse(
-    message: String
+    message: String,
 ) =
     ResponseEntity.badRequest().body(
         ActionResponse(
             state = OperationState.FAILED,
             message = message,
-            data = emptyList()
-        )
+            data = emptyList(),
+        ),
     )
 
 fun actionSuccessResponse(
     message: String = "",
-    data: List<Map<String, Any>> = emptyList()
+    data: List<Map<String, Any>> = emptyList(),
 ) =
     ResponseEntity.ok(
         ActionResponse(
             state = OperationState.SUCCESS,
             message = message,
-            data = data
-        )
+            data = data,
+        ),
     )
 
 fun dataByIdFailedResponse(
-    message: String
+    message: String,
 ) =
     ResponseEntity.badRequest().body(
         DataByIdResponse(
             state = OperationState.FAILED,
             message = message,
-            data = emptyMap()
-        )
+            data = emptyMap(),
+        ),
     )
 
 fun dataByIdSuccessResponse(
     message: String = "",
-    data: Map<String, Any>
+    data: Map<String, Any>,
 ) =
     ResponseEntity.ok(
         DataByIdResponse(
             state = OperationState.SUCCESS,
             message = message,
-            data = data
-        )
+            data = data,
+        ),
     )
 
 fun dataFailedResponse(
-    message: String
+    message: String,
 ) =
     ResponseEntity.badRequest().body(
         DataResponse(
@@ -63,15 +63,15 @@ fun dataFailedResponse(
             message = message,
             pages = PageData.EMPTY,
             records = RecordData.EMPTY,
-            data = emptyList()
-        )
+            data = emptyList(),
+        ),
     )
 
 fun dataSuccessResponse(
     message: String = "",
     pages: PageData = PageData.EMPTY,
     records: RecordData = RecordData.EMPTY,
-    data: List<Map<String, Any>>
+    data: List<Map<String, Any>>,
 ) =
     ResponseEntity.ok(
         DataResponse(
@@ -79,6 +79,6 @@ fun dataSuccessResponse(
             message = message,
             pages = pages,
             records = records,
-            data = data
-        )
+            data = data,
+        ),
     )

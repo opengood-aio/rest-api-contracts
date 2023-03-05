@@ -14,8 +14,8 @@ contract {
         body = body(
             mapOf(
                 "name" to "products",
-                "id" to "82a94d9f-894c-4c00-ba40-a36e8f55f842"
-            )
+                "id" to "82a94d9f-894c-4c00-ba40-a36e8f55f842",
+            ),
         )
         bodyMatchers {
             jsonPath("$.name", byRegex("products"))
@@ -28,8 +28,8 @@ contract {
         }
         body = body(
             mapOf(
-                "message" to "Data deleted"
-            )
+                "message" to "Data deleted",
+            ),
         )
         bodyMatchers {
             jsonPath("$.message", byRegex("Data deleted"))

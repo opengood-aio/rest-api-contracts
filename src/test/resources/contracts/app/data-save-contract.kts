@@ -16,10 +16,10 @@ contract {
                 "name" to "products",
                 "data" to listOf(
                     mapOf(
-                        "name" to "Product 1"
-                    )
-                )
-            )
+                        "name" to "Product 1",
+                    ),
+                ),
+            ),
         )
         bodyMatchers {
             jsonPath("$.name", byRegex("products"))
@@ -36,10 +36,10 @@ contract {
                 "data" to listOf(
                     mapOf(
                         "product_id" to 1,
-                        "name" to "Product 1"
-                    )
-                )
-            )
+                        "name" to "Product 1",
+                    ),
+                ),
+            ),
         )
         bodyMatchers {
             jsonPath("$.message", byRegex("Data saved"))

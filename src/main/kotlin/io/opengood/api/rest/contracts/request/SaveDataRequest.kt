@@ -7,5 +7,5 @@ data class SaveDataRequest(
     @JsonInclude(Include.NON_EMPTY)
     val name: String,
     @JsonInclude(Include.NON_EMPTY)
-    val data: List<Map<String, Any>>
+    val data: List<Map<String, Any>>,
 )

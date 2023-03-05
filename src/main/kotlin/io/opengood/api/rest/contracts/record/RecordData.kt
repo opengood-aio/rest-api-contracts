@@ -1,11 +1,11 @@
 package io.opengood.api.rest.contracts.record
 
 data class RecordData(
-    val total: Long
+    val total: Long,
 ) {
     companion object {
         val EMPTY = RecordData(
-            total = 0
+            total = 0,
         )
     }
 }
