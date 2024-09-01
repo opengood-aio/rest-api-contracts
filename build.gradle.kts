@@ -8,13 +8,22 @@ plugins {
 group = "io.opengood.api"
 
 opengood {
-    test {
-        frameworks {
-            java = true
-        }
+    features {
+        assertj = true
+        junitJupiter = true
+        lombok = true
     }
     artifact {
         description = "Reusable REST API contracts"
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency {
+        if (requested.group == "org.jetbrains.kotlin" && requested.name == "kotlin-script-util") {
+            useVersion("1.8.22")
+            because("Incompatibilities with older Kotlin versions")
+        }
     }
 }
 

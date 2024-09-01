@@ -4,8 +4,9 @@ data class SortRequest(
     val params: List<SortParameter>,
 ) {
     companion object {
-        val EMPTY = SortRequest(
-            params = emptyList(),
-        )
+        val EMPTY =
+            SortRequest(
+                params = emptyList(),
+            )
     }
 }
