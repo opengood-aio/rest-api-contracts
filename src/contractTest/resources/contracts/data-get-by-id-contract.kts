@@ -11,12 +11,13 @@ contract {
         headers {
             contentType = "application/json"
         }
-        body = body(
-            mapOf(
-                "name" to "products",
-                "id" to "82a94d9f-894c-4c00-ba40-a36e8f55f842",
-            ),
-        )
+        body =
+            body(
+                mapOf(
+                    "name" to "products",
+                    "id" to "82a94d9f-894c-4c00-ba40-a36e8f55f842",
+                ),
+            )
         bodyMatchers {
             jsonPath("$.name", byRegex("products"))
         }
@@ -26,16 +27,18 @@ contract {
         headers {
             contentType = "application/json"
         }
-        body = body(
-            mapOf(
-                "state" to "SUCCESS",
-                "message" to "Data retrieved",
-                "data" to mapOf(
-                    "product_id" to 1,
-                    "name" to "Product 1",
+        body =
+            body(
+                mapOf(
+                    "state" to "SUCCESS",
+                    "message" to "Data retrieved",
+                    "data" to
+                        mapOf(
+                            "product_id" to 1,
+                            "name" to "Product 1",
+                        ),
                 ),
-            ),
-        )
+            )
         bodyMatchers {
             jsonPath("$.message", byRegex("Data retrieved"))
         }
