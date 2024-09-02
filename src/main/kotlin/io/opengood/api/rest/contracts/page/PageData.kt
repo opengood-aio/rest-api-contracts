@@ -7,11 +7,12 @@ data class PageData(
     val count: Int,
 ) {
     companion object {
-        val EMPTY = PageData(
-            state = PageState.NONE,
-            index = 0,
-            size = 0,
-            count = 0,
-        )
+        val EMPTY =
+            PageData(
+                state = PageState.NONE,
+                index = 0,
+                size = 0,
+                count = 0,
+            )
     }
 }

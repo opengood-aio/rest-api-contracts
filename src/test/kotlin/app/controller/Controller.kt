@@ -22,61 +22,69 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/data")
 class Controller {
-
     @PostMapping("/delete")
-    fun delete(@RequestBody request: DeleteDataRequest): ResponseEntity<ActionResponse> {
-        return actionSuccessResponse(
+    fun delete(
+        @RequestBody request: DeleteDataRequest,
+    ): ResponseEntity<ActionResponse> =
+        actionSuccessResponse(
             message = "Data deleted",
         )
-    }
 
     @PostMapping("/get/id")
-    fun getById(@RequestBody request: GetDataByIdRequest): ResponseEntity<DataByIdResponse> {
-        return dataByIdSuccessResponse(
+    fun getById(
+        @RequestBody request: GetDataByIdRequest,
+    ): ResponseEntity<DataByIdResponse> =
+        dataByIdSuccessResponse(
             message = "Data retrieved",
-            data = mapOf(
-                "product_id" to 1,
-                "name" to "Product 1",
-            ),
+            data =
+                mapOf(
+                    "product_id" to 1,
+                    "name" to "Product 1",
+                ),
         )
-    }
 
     @PostMapping("/get")
-    fun get(@RequestBody request: GetDataRequest): ResponseEntity<DataResponse> {
-        return dataSuccessResponse(
+    fun get(
+        @RequestBody request: GetDataRequest,
+    ): ResponseEntity<DataResponse> =
+        dataSuccessResponse(
             message = "Data retrieved",
-            pages = PageData(
-                state = PageState.PAGINATED,
-                index = 0,
-                size = 2,
-                count = 1,
-            ),
-            records = RecordData(
-                total = 2,
-            ),
-            data = listOf(
-                mapOf(
-                    "product_id" to 1,
-                    "name" to "Product 1",
+            pages =
+                PageData(
+                    state = PageState.PAGINATED,
+                    index = 0,
+                    size = 2,
+                    count = 1,
                 ),
-                mapOf(
-                    "product_id" to 2,
-                    "name" to "Product 2",
+            records =
+                RecordData(
+                    total = 2,
                 ),
-            ),
+            data =
+                listOf(
+                    mapOf(
+                        "product_id" to 1,
+                        "name" to "Product 1",
+                    ),
+                    mapOf(
+                        "product_id" to 2,
+                        "name" to "Product 2",
+                    ),
+                ),
         )
-    }
 
     @PostMapping("/save")
-    fun save(@RequestBody request: SaveDataRequest): ResponseEntity<ActionResponse> {
-        return actionSuccessResponse(
+    fun save(
+        @RequestBody request: SaveDataRequest,
+    ): ResponseEntity<ActionResponse> =
+        actionSuccessResponse(
             message = "Data saved",
-            data = listOf(
-                mapOf(
-                    "product_id" to 1,
-                    "name" to "Product 1",
+            data =
+                listOf(
+                    mapOf(
+                        "product_id" to 1,
+                        "name" to "Product 1",
+                    ),
                 ),
-            ),
         )
-    }
 }

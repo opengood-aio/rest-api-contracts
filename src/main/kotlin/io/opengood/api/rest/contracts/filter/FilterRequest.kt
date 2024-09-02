@@ -4,8 +4,9 @@ data class FilterRequest(
     val params: List<FilterParameter>,
 ) {
     companion object {
-        val EMPTY = FilterRequest(
-            params = emptyList(),
-        )
+        val EMPTY =
+            FilterRequest(
+                params = emptyList(),
+            )
     }
 }

@@ -1,18 +1,17 @@
 # REST API Contracts
 
-[![Build](https://github.com/opengoodio/rest-api-contracts/workflows/build/badge.svg)](https://github.com/opengoodio/rest-api-contracts/actions?query=workflow%3Abuild)
-[![Release](https://github.com/opengoodio/rest-api-contracts/workflows/release/badge.svg)](https://github.com/opengoodio/rest-api-contracts/actions?query=workflow%3Arelease)
-[![Codecov](https://codecov.io/gh/opengoodio/rest-api-contracts/branch/main/graph/badge.svg?token=AEEYTGK87F)](https://codecov.io/gh/opengoodio/rest-api-contracts)
-[![Release Version](https://img.shields.io/github/release/opengoodio/rest-api-contracts.svg)](https://github.com/opengoodio/rest-api-contracts/releases/latest)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.opengood.api/rest-api-contracts/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.opengood.api/rest-api-contracts)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/opengoodio/rest-api-contracts/master/LICENSE)
-[![FOSSA](https://app.fossa.com/api/projects/custom%2B22161%2Fgithub.com%2Fopengoodio%2Frest-api-contracts.svg?type=small)](https://app.fossa.com/projects/custom%2B22161%2Fgithub.com%2Fopengoodio%2Frest-api-contracts?ref=badge_small)
+[![Build](https://github.com/opengood-aio/rest-api-contracts/workflows/build/badge.svg)](https://github.com/opengood-aio/rest-api-contracts/actions?query=workflow%3Abuild)
+[![Release](https://github.com/opengood-aio/rest-api-contracts/workflows/release/badge.svg)](https://github.com/opengood-aio/rest-api-contracts/actions?query=workflow%3Arelease)
+[![Codecov](https://codecov.io/gh/opengood-aio/rest-api-contracts/branch/main/graph/badge.svg?token=AEEYTGK87F)](https://codecov.io/gh/opengood-aio/rest-api-contracts)
+[![Release Version](https://img.shields.io/github/release/opengood-aio/rest-api-contracts.svg)](https://github.com/opengood-aio/rest-api-contracts/releases/latest)
+[![Maven Central](https://img.shields.io/maven-central/v/io.opengood.api/rest-api-contracts.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.opengood.api%22%20AND%20a:%22rest-api-contracts%22)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/opengood-aio/rest-api-contracts/master/LICENSE)
 
 Reusable REST API contracts
 
 ## Compatibility
 
-* Java 17
+* Java 21
 * Spring Boot 3
 
 ## Setup

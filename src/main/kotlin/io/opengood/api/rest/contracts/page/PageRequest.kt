@@ -5,9 +5,10 @@ data class PageRequest(
     val size: Int,
 ) {
     companion object {
-        val EMPTY = PageRequest(
-            index = 0,
-            size = 0,
-        )
+        val EMPTY =
+            PageRequest(
+                index = 0,
+                size = 0,
+            )
     }
 }

@@ -9,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest(classes = [TestApplication::class])
 abstract class AbstractBaseContractTest {
-
     @Autowired
     lateinit var controller: Controller
 

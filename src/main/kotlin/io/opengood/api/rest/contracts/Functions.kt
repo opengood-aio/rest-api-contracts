@@ -8,9 +8,7 @@ import io.opengood.api.rest.contracts.response.DataResponse
 import io.opengood.api.rest.contracts.response.OperationState
 import org.springframework.http.ResponseEntity
 
-fun actionFailedResponse(
-    message: String,
-) =
+fun actionFailedResponse(message: String) =
     ResponseEntity.badRequest().body(
         ActionResponse(
             state = OperationState.FAILED,
@@ -22,18 +20,15 @@ fun actionFailedResponse(
 fun actionSuccessResponse(
     message: String = "",
     data: List<Map<String, Any>> = emptyList(),
-) =
-    ResponseEntity.ok(
-        ActionResponse(
-            state = OperationState.SUCCESS,
-            message = message,
-            data = data,
-        ),
-    )
+) = ResponseEntity.ok(
+    ActionResponse(
+        state = OperationState.SUCCESS,
+        message = message,
+        data = data,
+    ),
+)
 
-fun dataByIdFailedResponse(
-    message: String,
-) =
+fun dataByIdFailedResponse(message: String) =
     ResponseEntity.badRequest().body(
         DataByIdResponse(
             state = OperationState.FAILED,
@@ -45,18 +40,15 @@ fun dataByIdFailedResponse(
 fun dataByIdSuccessResponse(
     message: String = "",
     data: Map<String, Any>,
-) =
-    ResponseEntity.ok(
-        DataByIdResponse(
-            state = OperationState.SUCCESS,
-            message = message,
-            data = data,
-        ),
-    )
+) = ResponseEntity.ok(
+    DataByIdResponse(
+        state = OperationState.SUCCESS,
+        message = message,
+        data = data,
+    ),
+)
 
-fun dataFailedResponse(
-    message: String,
-) =
+fun dataFailedResponse(message: String) =
     ResponseEntity.badRequest().body(
         DataResponse(
             state = OperationState.FAILED,
@@ -72,13 +64,12 @@ fun dataSuccessResponse(
     pages: PageData = PageData.EMPTY,
     records: RecordData = RecordData.EMPTY,
     data: List<Map<String, Any>>,
-) =
-    ResponseEntity.ok(
-        DataResponse(
-            state = OperationState.SUCCESS,
-            message = message,
-            pages = pages,
-            records = records,
-            data = data,
-        ),
-    )
+) = ResponseEntity.ok(
+    DataResponse(
+        state = OperationState.SUCCESS,
+        message = message,
+        pages = pages,
+        records = records,
+        data = data,
+    ),
+)
