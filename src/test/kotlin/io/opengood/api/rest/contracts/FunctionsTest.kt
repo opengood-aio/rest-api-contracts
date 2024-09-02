@@ -80,7 +80,8 @@ class FunctionsTest :
         }
 
         test(
-            "dataFailedResponse function returns response entity with bad request status, failed state, message, empty pages, empty records, and empty list of data",
+            "dataFailedResponse function returns response entity with bad request status, failed state, message, empty pages, empty" +
+                "records, and empty list of data",
         ) {
             val response = dataFailedResponse(message = "Error")
 
@@ -98,7 +99,8 @@ class FunctionsTest :
         }
 
         test(
-            "dataSuccessResponse function returns response entity with ok status, success state, no message, empty pages, empty records, and list of data",
+            "dataSuccessResponse function returns response entity with ok status, success state, no message, empty pages, empty " +
+                "records, and list of data",
         ) {
             val data =
                 listOf(
