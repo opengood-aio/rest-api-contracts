@@ -2,6 +2,7 @@
 
 [![Build](https://github.com/opengood-aio/rest-api-contracts/workflows/build/badge.svg)](https://github.com/opengood-aio/rest-api-contracts/actions?query=workflow%3Abuild)
 [![Release](https://github.com/opengood-aio/rest-api-contracts/workflows/release/badge.svg)](https://github.com/opengood-aio/rest-api-contracts/actions?query=workflow%3Arelease)
+[![CodeQL](https://github.com/opengood-aio/rest-api-contracts/actions/workflows/codeql.yml/badge.svg)](https://github.com/opengood-aio/rest-api-contracts/actions/workflows/codeql.yml)
 [![Codecov](https://codecov.io/gh/opengood-aio/rest-api-contracts/branch/main/graph/badge.svg?token=AEEYTGK87F)](https://codecov.io/gh/opengood-aio/rest-api-contracts)
 [![Release Version](https://img.shields.io/github/release/opengood-aio/rest-api-contracts.svg)](https://github.com/opengood-aio/rest-api-contracts/releases/latest)
 [![Maven Central](https://img.shields.io/maven-central/v/io.opengood.api/rest-api-contracts.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.opengood.api%22%20AND%20a:%22rest-api-contracts%22)
